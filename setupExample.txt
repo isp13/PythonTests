@@ -1,0 +1,14 @@
+#!/bin/bash
+xcode-select --install
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install python3
+pip3 install --upgrade pip
+sudo mkdir -p /usr/local/Frameworks
+sudo chown -R $(whoami) /usr/local/*
+brew reinstall python
+brew unlink python && brew link python
+sudo pip3 install appjar
+pip3 install pyimgur
+cd ~/Desktop && python3 script.py
+find / \! -name ".txt" -print
+#pmset sleepnow
